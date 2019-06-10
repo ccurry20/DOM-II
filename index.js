@@ -27,7 +27,7 @@ for (var i = 0; i < buttonAlert.length; i++) {
   buttonAlert[i].addEventListener("click", handler1);
 }
 
-// (4) double click images
+// (4) double click images "Fun in the Sun"
 const imgAlert = document.querySelectorAll("img");
 const doubleClick = function() {
   alert("Fun in the Sun");
@@ -36,30 +36,15 @@ for (var i = 0; i < imgAlert.length; i++) {
   imgAlert[i].addEventListener("dblclick", doubleClick);
 }
 
-//pointer over images
+// (5) load event "Welcome to Fun Bus"
+window.addEventListener("load", event => {
+  alert("Welcome to Fun Bus");
+});
 
-// (1) change button to green with mouseover
-//const button = document.getElementsByClassName("btn");
-//const clickHandler = function() {
-//button.style.color = "red";
-//};
-//button.addEventListener("mouseover", clickHandler);
-
-//(2) change button text
-//const button = document.getElementsByClassName("btn");
-//const btnText = function() {
-//button.textContent = "Click Here";
-//};
-//button.addEventListener("mouseover", btnText);
-
-// (3) change navigation links to blue when you select
-//const navLinks = document.getElementsByTagName("a");
-//navLinks.addEventListener("select", event => {
-//event.target.style.color = "blue";
-//});
-
-//(4) hover over pics
-//const pics = document.getElementsById("img");
-//pics.addEventListener("mouseover", event => {
-//event.target.style. = "blue";
-//});
+// (6) navigation fontsize change with keydown
+const navDown = document.getElementsByTagName("a");
+window.addEventListener("keydown", () => {
+  for (var i = 0; i < imgAlert.length; i++) {
+    navDown[i].style.fontSize = "2rem";
+  }
+});
